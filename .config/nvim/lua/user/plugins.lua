@@ -89,8 +89,10 @@ return packer.startup(function(use)
     -- Git
     use "lewis6991/gitsigns.nvim"
 
-    -- Transparency
+    -- Misc
     use "xiyaowong/nvim-transparent"
+    use "lewis6991/hover.nvim"
+    use "Fildo7525/pretty_hover"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
