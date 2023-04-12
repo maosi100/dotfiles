@@ -124,3 +124,20 @@ eval "$(pyenv init -)"
 
 # dotfiles tracking like https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=/Users/maximosipovs/.cfg/ --work-tree=/Users/maximosipovs'
+
+# nvim switcher see https://www.youtube.com/watch?v=LkHjJlSgKZY
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+
+function nvims() {
+  items=("default" "LazyVim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bindkey -s ^a "nvims\n"
