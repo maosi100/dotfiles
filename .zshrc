@@ -126,10 +126,11 @@ eval "$(pyenv init -)"
 # alias config='/usr/bin/git --git-dir=/Users/maximosipovs/.cfg/ --work-tree=/Users/maximosipovs'
 
 # nvim switcher see https://www.youtube.com/watch?v=LkHjJlSgKZY
-alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias lazy="NVIM_APPNAME=LazyVim nvim"
+alias kickstart="NVIM_APPNAME=kickstart nvim"
 
 function nvims() {
-  items=("default" "LazyVim")
+  items=("default" "LazyVim" "lazy_test" "kickstart")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
@@ -141,3 +142,6 @@ function nvims() {
 }
 
 bindkey -s ^a "nvims\n"
+
+# Created by `pipx` on 2024-06-02 17:28:21
+export PATH="$PATH:/Users/maximosipovs/.local/bin"
