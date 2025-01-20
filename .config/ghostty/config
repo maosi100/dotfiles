@@ -1,7 +1,20 @@
-background = 1d1d1d
-background-opacity = 0.7
+# Theme and look
+theme = darkplus
+background-opacity = 0.8
 background-blur-radius = 20
 
-font-size = 16
-font-family = "JetBrainsMonoNL"
+# Fonts
+font-size = 15
+font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-feature = Regular
+
+# Window
+macos-titlebar-style = hidden
+window-padding-y = 10,0
+window-padding-x = 8,8
+
+# Feel
+mouse-hide-while-typing = true
+
+# Keybinds
+keybind = ctrl+ö=reload_config
