@@ -145,3 +145,9 @@ bindkey -s ^a "nvims\n"
 
 # Created by `pipx` on 2024-06-02 17:28:21
 export PATH="$PATH:/Users/maximosipovs/.local/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/maximosipovs/Coding/04_Misc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/maximosipovs/Coding/04_Misc/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/maximosipovs/Coding/04_Misc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/maximosipovs/Coding/04_Misc/google-cloud-sdk/completion.zsh.inc'; fi
