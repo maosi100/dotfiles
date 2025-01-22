@@ -151,3 +151,12 @@ if [ -f '/Users/maximosipovs/Coding/04_Misc/google-cloud-sdk/path.zsh.inc' ]; th
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/maximosipovs/Coding/04_Misc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/maximosipovs/Coding/04_Misc/google-cloud-sdk/completion.zsh.inc'; fi
+
+# aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+alias cl="clear"
