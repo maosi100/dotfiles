@@ -129,19 +129,19 @@ eval "$(pyenv init -)"
 alias lazy="NVIM_APPNAME=LazyVim nvim"
 alias kickstart="NVIM_APPNAME=kickstart nvim"
 
-function nvims() {
-  items=("default" "LazyVim" "lazy_test" "kickstart")
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
-  if [[ -z $config ]]; then
-    echo "Nothing selected"
-    return 0
-  elif [[ $config == "default" ]]; then
-    config=""
-  fi
-  NVIM_APPNAME=$config nvim $@
-}
-
-bindkey -s ^a "nvims\n"
+# function nvims() {
+#   items=("default" "LazyVim" "lazy_test" "kickstart")
+#   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+#   if [[ -z $config ]]; then
+#     echo "Nothing selected"
+#     return 0
+#   elif [[ $config == "default" ]]; then
+#     config=""
+#   fi
+#   NVIM_APPNAME=$config nvim $@
+# }
+#
+# bindkey -s ^b "nvims\n"
 
 # Created by `pipx` on 2024-06-02 17:28:21
 export PATH="$PATH:/Users/maximosipovs/.local/bin"
